@@ -1,1 +1,48 @@
-GET http://localhost:5000
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username" : "thuy",
+    "password" : "minhhai3817"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username" : "nmhnmh123",
+    "password" : "minhhai3817"
+}
+###
+POST http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTEyNDA1NzAwZWE2MzJiMmM5MDcxZjUiLCJpYXQiOjE2MjkxMjM4NzV9.OOid7R5ci6ZPwzWR8LVBvJbet8fSuYynJqcLFuarmBk
+
+{   
+    "title": "post11212",
+    "description": "asd1212asdasd",
+    "url" : "fb.co1212m",
+    "status" : "LEARNED"
+}
+###
+GET http://localhost:5000/api/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTEyNDA1NzAwZWE2MzJiMmM5MDcxZjUiLCJpYXQiOjE2MjkxMjM4NzV9.OOid7R5ci6ZPwzWR8LVBvJbet8fSuYynJqcLFuarmBk
+
+###
+PUT http://localhost:5000/api/post/6110f171e239e015dc7d76e0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTAxNjI2YjhjN2Y3MzI4MWNiZjU3NDQiLCJpYXQiOjE2Mjg1OTM1Nzh9.1Rk48wvVU9p4DTmzb2onNJpj7NWYnYhH1s81o3v_cWU
+
+{   
+    "title": "học nodejs và express",
+    "description": "update",
+    "url" : "fbupdate.com",
+    "status" : "LEARNING"
+}
+
+###
+DELETE  http://localhost:5000/api/post/611a74c0d5f2c5220cb2c994
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTAxNjI2YjhjN2Y3MzI4MWNiZjU3NDQiLCJpYXQiOjE2Mjg1OTM1Nzh9.1Rk48wvVU9p4DTmzb2onNJpj7NWYnYhH1s81o3v_cWU
+

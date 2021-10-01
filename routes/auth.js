@@ -62,8 +62,8 @@ router.post('/login', async (req, res) => {
             return res.status(400).json({ success: false, message: "Incorrect username or password" })
         }
         //all good
-        const acccessToken = jwt.sign({userId: user._id}, process.env.ACCESS_TOKEN_SECRET)
-        res.json({ success: true, message: "Logged in successfully", acccessToken })
+        const accessToken = jwt.sign({userId: user._id}, process.env.ACCESS_TOKEN_SECRET)
+        res.json({ success: true, message: "Logged in successfully", accessToken })
     } catch (error) {
         console.log(error);
         res.status(500).json({ success: false, message: "Server error" })
